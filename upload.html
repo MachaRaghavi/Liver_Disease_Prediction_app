@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+<h1>Upload LFT Report</h1>
+<p>Upload a JPG, JPEG or PNG image of an LFT report.</p>
+<form method="post" enctype="multipart/form-data">
+    <input type="file" name="report" accept=".jpg,.jpeg,.png" required>
+    <button type="submit">Upload</button>
+</form>
+<div class="notice">
+For this first version, the app does not automatically read medical report text from the image.
+After uploading, verify the values manually and enter them in <b>Enter LFT Values</b>.
+This avoids making an OCR mistake look like a medical result.
+</div>
+</div>
+{% endblock %}

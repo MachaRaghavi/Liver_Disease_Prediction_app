@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+<h1>Welcome, {{ session["username"] }}</h1>
+<p>This project demonstrates machine-learning-based screening using LFT-related laboratory values.</p>
+
+<div class="grid">
+  <a class="tile" href="{{ url_for('predict') }}">
+    <h2>Enter LFT Values</h2>
+    <p>Enter the values from a laboratory report and run the trained model.</p>
+  </a>
+  <a class="tile" href="{{ url_for('upload') }}">
+    <h2>Upload LFT Report</h2>
+    <p>Upload a report image, then verify its values manually before prediction.</p>
+  </a>
+</div>
+
+<div class="notice">
+<b>Important:</b> This is an academic ML screening project, not a medical diagnostic tool.
+Do not use the result alone to make healthcare decisions.
+</div>
+</div>
+{% endblock %}

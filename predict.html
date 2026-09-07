@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+<h1>Enter LFT / Patient Values</h1>
+<p class="muted">Use the same units/scales shown in the ILPD training dataset. If you are copying from a report, verify every value before submitting.</p>
+
+<form method="post" class="formgrid">
+    <div><label>Age</label><input type="number" name="Age" min="0" max="120" step="1" required></div>
+    <div><label>Gender</label>
+        <select name="Gender" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+    </div>
+    <div><label>Total Bilirubin (TB)</label><input type="number" name="TB" step="any" required></div>
+    <div><label>Direct Bilirubin (DB)</label><input type="number" name="DB" step="any" required></div>
+    <div><label>Alkaline Phosphatase (Alkphos)</label><input type="number" name="Alkphos" step="any" required></div>
+    <div><label>SGPT / ALT (Sgpt)</label><input type="number" name="Sgpt" step="any" required></div>
+    <div><label>SGOT / AST (Sgot)</label><input type="number" name="Sgot" step="any" required></div>
+    <div><label>Total Protein (TP)</label><input type="number" name="TP" step="any" required></div>
+    <div><label>Albumin (ALB)</label><input type="number" name="ALB" step="any" required></div>
+    <div><label>A/G Ratio</label><input type="number" name="AG" step="any" required></div>
+    <div class="full"><button type="submit">Predict</button></div>
+</form>
+
+<div class="notice">
+The model uses Age, Gender, TB, DB, Alkphos, Sgpt, Sgot, TP, ALB and A/G Ratio.
+</div>
+</div>
+{% endblock %}

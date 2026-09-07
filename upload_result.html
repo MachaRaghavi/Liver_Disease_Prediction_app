@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+<h1>Report Uploaded</h1>
+<p>{{ message }}</p>
+<p>Saved file: <b>{{ filename }}</b></p>
+<a class="button" href="{{ url_for('predict') }}">Enter verified values and predict</a>
+</div>
+{% endblock %}

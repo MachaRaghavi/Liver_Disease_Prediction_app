@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+<h1>Prediction Result</h1>
+<h2>{{ result }}</h2>
+
+{% if probability is not none %}
+<p>Model probability for the liver-disease class: <b>{{ "%.2f"|format(probability) }}%</b></p>
+{% endif %}
+
+<p>{{ message }}</p>
+
+<div class="notice">
+<b>What to do next:</b> If laboratory results are abnormal or you have health concerns, discuss them with a qualified healthcare professional. Do not start or stop medicines based only on this app.
+</div>
+
+<a class="button" href="{{ url_for('predict') }}">Try another prediction</a>
+</div>
+{% endblock %}
