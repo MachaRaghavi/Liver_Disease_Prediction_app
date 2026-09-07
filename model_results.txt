@@ -1,0 +1,22 @@
+LIVER DISEASE SCREENING MODEL RESULTS
+=====================================
+
+Logistic Regression
+Accuracy : 0.7350
+Precision: 0.9194
+Recall   : 0.6867
+F1-score : 0.7862
+
+SVM
+Accuracy : 0.7094
+Precision: 0.9455
+Recall   : 0.6265
+F1-score : 0.7536
+
+Random Forest
+Accuracy : 0.7350
+Precision: 0.7889
+Recall   : 0.8554
+F1-score : 0.8208
+
+Selected model: Random Forest
